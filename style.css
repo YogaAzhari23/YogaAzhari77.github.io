@@ -1,0 +1,494 @@
+
+*
+/* Reset default browser margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background-color: #fff;
+}
+/* Headline Hero */
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ff6b35; /* warna brand */
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    background: #ff5a2f;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo img {
+    height: 40px;       /* tinggi logo */
+    width: 40px;        /* lebar logo sama dengan tinggi */
+    border-radius: 50%; /* bikin lingkaran */
+    object-fit: cover;  /* isi gambar dipotong biar pas */
+    border: 2px solid #fff; /* opsional: garis putih di sekeliling logo */
+  }
+  
+  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  /* Hero Section */
+  .hero {
+    height: 100vh; /* full tinggi layar */
+    width: 100%;   /* full lebar layar */
+    background: url('foto/background\ hero.jpeg') center/cover no-repeat;
+    display: flex;
+    background-position: 120% center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+
+/* Overlay gelap agar teks lebih jelas */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+/* Khusus tombol CTA di hero */
+.hero-text .btn {
+  background: #ff6b35;
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 40px; /* tombol turun lebih jauh */
+  transition: transform 0.2s ease, background 0.3s ease;
+  outline: none; /* hilangkan garis putih saat klik */
+}
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* putih modern */
+  text-transform: none; /* biar natural, tidak semua huruf besar */
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6); /* biar teks jelas di atas bg */
+}
+
+/* Hover (tanpa efek kilat putih) */
+.hero-text .btn:hover {
+  background: #e85a2a;
+  transform: translateY(-4px); /* efek naik halus */
+}
+
+/* Saat ditekan (klik) */
+.hero-text .btn:active {
+  transform: scale(0.93); /* tombol mengecil sedikit */
+  background: #d94e25;
+}
+
+  
+  /*tombol pesan via wa*/
+  .btn {
+    background: #ff5a2f;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+  }
+  
+/* tutup tombol pesan via wa*/
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .about p, .contact p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff5a2f;
+  }
+  
+  .order form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .order input, .order select, .order textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .socials a {
+    color: #ff5a2f;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .btn {
+    margin-top: 10px;
+  }
+/* Animasi Fade In */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover Tombol */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+/* Hover Menu Card */
+.menu-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+.about-desc {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.about-card h3 {
+  margin: 15px 0 8px;
+  color: #ff5a2f;
+  font-size: 1.2rem;
+}
+
+.about-card p {
+  padding: 0 12px 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  background-color: #1a1a1a; /* card/section berbeda dari background utama */
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+h1, h2, h3 {
+  color: #ffbb66; /* aksen hangat */
+}
+
+.hero-text .btn, .btn-whatsapp {
+  background-color: #ff6b35;
+  color: #fff;
+  border: none;
+}
+
+.hero-text .btn:hover {
+  background-color: #e85a2a;
+}
+
+.about-card {
+  background: #222; /* card lebih terang */
+  box-shadow: 0 5px 15px rgba(255,255,255,0.05);
+  color: #eee;
+}
+.menu-section {
+  background-color: #111; /* latar belakang gelap modern */
+  color: #eee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu-section h2 {
+  color: #ffbb66;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.menu-section p {
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu-card {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.1);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* gambar menyesuaikan kotak */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.menu-card h3 {
+  color: #ffbb66;
+  margin: 10px 0 5px;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: #ff6b35;
+  font-size: 1.1rem;
+}
+.contact-section {
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-section h2 {
+  color: #ffbb66;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-icon.facebook { background-color: #1877F2; }
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+.social-icon::after {
+  display: none; /* hilangkan garis bawah jika ada */
+  content: none;
+}
+
+.social-icon {
+  border: none; /* pastikan border bawah hilang */
+}
+.social-icon {
+  text-decoration: none; /* hilangkan underline default */
+}
+
