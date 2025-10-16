@@ -637,3 +637,101 @@ h1, h2, h3 {
   }
 }
 
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* HERO background menyesuaikan di semua layar */
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* Tablet layout */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* HP layout */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none; /* sembunyikan navbar default */
+  }
+
+  /* Hero section */
+  .hero {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+
+  /* About Section */
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Menu section */
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact section */
+  .contact-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+

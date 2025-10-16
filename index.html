@@ -161,6 +161,7 @@
       window.open(`https://wa.me/6283890463632?text=${encodeURIComponent(message)}`, "_blank");
     });
   </script>
+  
   <script>
     // Animasi saat scroll
     const observer = new IntersectionObserver(entries => {
@@ -172,6 +173,24 @@
     }, { threshold: 0.2 });
   
     document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+  <script>
+    // Hilangkan navbar saat scroll di HP
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+  
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (window.innerWidth <= 768) { // hanya aktif di HP
+        if (currentScroll > lastScrollTop) {
+          navbar.style.top = "-80px"; // sembunyikan navbar
+        } else {
+          navbar.style.top = "0"; // tampilkan lagi saat scroll ke atas
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      }
+    });
   </script>
   
 </body>
