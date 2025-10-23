@@ -17,6 +17,13 @@
         <img src="foto/Logo Kelompok 1 Pangsit Gamon.jpeg" alt="Logo Pangsit Gamon">
         <span>Pangsit Gamon</span>
       </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#home">Beranda</a></li>
         <li><a href="#about">Tentang</a></li>
@@ -131,7 +138,7 @@
         <i class="fab fa-whatsapp"></i>
       </a>
       <!-- Instagram -->
-      <a href="https://www.instagram.com/pangsitgamon.official?igsh=MWVjcm55NDJlbzQwZA==" target="_blank" class="social-icon instagram">
+      <a href="https://www.instagram.com/pangs_itgamon?igsh=MTRjamphaTR2dXloaQ==" target="_blank" class="social-icon instagram">
         <i class="fab fa-instagram"></i>
       </a>
       <!-- TikTok -->
@@ -192,6 +199,15 @@
       }
     });
   </script>
-  
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    toggle.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>

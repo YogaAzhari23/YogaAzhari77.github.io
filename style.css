@@ -683,8 +683,26 @@ h1, h2, h3 {
 
   .nav-links {
     display: none; /* sembunyikan navbar default */
-  }
+    flex-direction: column;
+  background-color: #c0392b; /* tetap warna navbar merah */
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 180px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: right;
 
+  }
+  .nav-links.active {
+    display: flex; /* tampil saat tombol ditekan */
+  }
+  
+  /* tampilkan tombol hamburger hanya di HP */
+  .menu-toggle {
+    display: flex;
+  }
   /* Hero section */
   .hero {
     text-align: center;
@@ -735,3 +753,29 @@ h1, h2, h3 {
   }
 }
 
+/* ===================== HAMBURGER MENU ===================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animasi silang saat aktif */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
